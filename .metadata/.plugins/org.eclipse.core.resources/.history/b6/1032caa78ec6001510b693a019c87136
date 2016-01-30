@@ -1,0 +1,12 @@
+public class Test07 {
+	public static void method(String s){
+		if(s.matches("^[A-Z]$.")){
+			System.out.println("this sentence");
+		}else{
+			System.out.println("");
+		}
+	}
+	public static void main(String args[]){
+		method("");
+	}
+}

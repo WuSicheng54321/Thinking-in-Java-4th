@@ -1,0 +1,12 @@
+public class Test07 {
+	public static void method(String s){
+		if(s.matches("\\p{Upper}?\\$.")){
+			System.out.println("this sentence");
+		}else{
+			System.out.println("no");
+		}
+	}
+	public static void main(String args[]){
+		method("Abc.");
+	}
+}

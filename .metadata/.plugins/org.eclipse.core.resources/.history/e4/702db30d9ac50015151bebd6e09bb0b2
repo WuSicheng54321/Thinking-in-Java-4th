@@ -1,0 +1,21 @@
+class A21Exception extends Exception{
+	
+}
+
+class A21{
+	public A21() throws A21Exception{
+		throw new A21Exception();
+	}
+}
+public class Test21 extends A21 {
+	public Test21() throws A21Exception{
+		try{
+			new A21();
+		}catch(A21Exception e){
+			e.printStackTrace(System.out);
+		}
+	}
+	public static void main(String args[]) throws A21Exception{
+		new Test21();
+	}
+}

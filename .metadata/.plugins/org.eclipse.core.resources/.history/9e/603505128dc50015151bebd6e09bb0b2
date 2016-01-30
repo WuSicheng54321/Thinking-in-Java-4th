@@ -1,0 +1,35 @@
+class VerImportantException extends Exception{
+	public String toString(){
+		return "A very import exception";
+	}
+}
+class HoHumException extends Exception{
+	public String toString(){
+		return "A trivial exception";
+	}
+}
+public class LostMessage {
+	void f() throws VerImportantException{
+		throw new VerImportantException();
+	}
+	void dispose() throws HoHumException{
+		throw new HoHumException();
+	}
+	public static void main(String args[]){
+		try{
+			LostMessage lm=new LostMessage();
+			try{
+				try{
+					lm.dispose();
+				}finally{
+					lm.f();
+				}
+			}finally{
+				lm.dispose();
+			}
+		}catch(Exception e){
+			System.out.println(e);
+		}
+	}
+
+}

@@ -1,0 +1,32 @@
+class A25Exception extends Exception{}
+class A25Exception2 extends A25Exception{}
+class A25Exception3 extends A25Exception2{}
+class A{
+	public void f() throws A25Exception{
+		throw new A25Exception();
+	}
+}
+class B extends A{
+	public void f() throws A25Exception2{
+		throw new A25Exception2();
+	}
+}
+class C extends B{
+	public void f() throws A25Exception3{
+		throw new A25Exception3();
+	}
+}
+public class Test25 {
+	public static void main(String args[]){
+		A a=new C();
+		try {
+			a.f();
+//		} catch (A25Exception3 e) {
+//			System.out.println("3");
+		}catch(A25Exception2 e){
+			System.out.println("2");
+		}catch(A25Exception e){
+			System.out.println("1");
+		}
+	}
+}

@@ -1,0 +1,15 @@
+public class FailingConstructor {
+	public FailingConstructor(int i){
+		try{
+			int c=10/i;
+		}catch(Exception e){
+			System.out.println("the Denominator is zero");
+		}
+		public void dispose(){
+			
+		}
+	}
+	public static void main(String args[]){
+		new FailingConstructor(0);
+	}
+}
