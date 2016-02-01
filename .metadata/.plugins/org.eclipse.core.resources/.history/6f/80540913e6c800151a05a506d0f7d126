@@ -1,0 +1,7 @@
+import typeinfo.pets.*;
+
+public class Test01 {
+	public static void main(String args[]){
+		Holder3<Pets> h3=new Holder3<>();
+	}
+}
