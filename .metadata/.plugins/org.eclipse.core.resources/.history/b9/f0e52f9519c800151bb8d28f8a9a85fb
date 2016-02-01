@@ -1,0 +1,21 @@
+class A08{}
+class A081 extends A08{}
+class A082 extends A081{}
+public class Test08 {
+	public static void main(String args[]){
+		A082 a=new A082();
+		System.out.println(a.getClass());
+		Class c=null;
+		try {
+			c=Class.forName("A082");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Class up=c.getSuperclass();
+		System.out.println(a.getClass());
+		System.out.println(up);
+		Class up1=up.getSuperclass();
+		System.out.println(up1);
+	}
+}
