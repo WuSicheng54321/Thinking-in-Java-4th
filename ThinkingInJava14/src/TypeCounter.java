@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class TypeCounter extends HashMap<Class<?>,Integer>{
 	private Class<?> baseType;
@@ -16,6 +17,11 @@ public class TypeCounter extends HashMap<Class<?>,Integer>{
 		Integer quantity=get(type);
 		put(type,quantity==null?1:quantity+1);
 		Class<?> superClass=type.getSuperclass();
-		if(superClass!=null&&)
+		if(superClass!=null&&baseType.isAssignableFrom(superClass))
+			countClass(superClass);
+	}
+	public String toString{
+		StringBuilder result=new StringBuilder();
+		for(Map<K, V>.Entry<Class, V>)
 	}
 }

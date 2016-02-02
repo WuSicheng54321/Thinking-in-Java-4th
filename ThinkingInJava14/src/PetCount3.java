@@ -6,7 +6,7 @@ import typeinfo.pets.Pet;
 public class PetCount3 {
 	static class PetCounter extends LinkedHashMap<Class<? extends Pet>, Integer>{
 		public PetCounter(){
-			super(Mapdata.map(LiteralPetCreator.allTypes,0));
+			super(MapData.map(LiteralPetCreator.allTypes,0));
 		}
 	}
 	public void count(Pet pet){
