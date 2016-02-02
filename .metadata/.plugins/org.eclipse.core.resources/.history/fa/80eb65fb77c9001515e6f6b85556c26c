@@ -1,0 +1,17 @@
+public class Test07 {
+	public static int[] method(int size){
+		int[] last = null;
+		int count=0;
+		for(int i=0;i<size;i++){
+			if(i<2){
+				last[i]=1;
+			}else{
+				last[i]=last[i-1]+last[i-2];
+			}
+		}
+		return last;
+	}
+	public static void main(String args[]){
+		System.out.println(last);
+	}
+}
