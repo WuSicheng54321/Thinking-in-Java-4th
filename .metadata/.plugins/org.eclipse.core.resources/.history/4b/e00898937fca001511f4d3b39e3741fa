@@ -1,0 +1,38 @@
+package Test08;
+
+import java.util.Iterator;
+import java.util.*;
+
+public class StroyCharacters implements Generator<GoodGuys>,
+	Iterable<GoodGuys>{
+	private Class[] types={
+			A.class,B.class,C.class,D.class,E.class,F.class
+	};
+	private static Random rand =new Random(47);
+	public StroyCharacters(){}
+	private int size=0;
+	public GoodGuys next(){
+		try{
+			return (GoodGuys) types[rand.nextInt(types.length)].newInstance();
+		}catch(Exception e){
+			throw new RuntimeException();
+		}
+	}
+	class StoryIterator implements Iterator<GoodGuy>{
+		int count=size;
+		public boolean hasNext(){
+			return count>0;
+		}
+		public GoodGuys next(){
+			count--;
+			return StroyCharacters.this.next();
+		}	
+		public void remove(){
+			throw new UnsupportedOperationException();
+		}
+	};
+	public Iterator<GoodGuys> iterator(){
+		return new StoryIterator();
+	}
+	
+}
