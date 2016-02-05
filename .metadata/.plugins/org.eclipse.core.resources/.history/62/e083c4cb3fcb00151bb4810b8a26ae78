@@ -13,7 +13,7 @@ public class Generators {
 		for(Coffee c:coffee){
 			System.out.println(c);
 		}
-		Collection<Integer> fnumbers=fill(new LinkedList<Integer>(),new Fibonacci(),12);
+		Collection<Integer> fnumbers=fill(new ArrayList<Integer>(),new Fibonacci(),12);
 		for(int i:fnumbers){
 			System.out.print(i+" ");
 		}

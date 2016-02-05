@@ -1,0 +1,8 @@
+import java.util.*;
+
+public class WatercolorSet {
+	public static void main(String args[]){
+		Set<Watercolors> set1=EnumSet.range(A, B);
+		
+	}
+}
