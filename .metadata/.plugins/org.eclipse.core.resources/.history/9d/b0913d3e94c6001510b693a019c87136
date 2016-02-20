@@ -1,9 +1,0 @@
-public class Test07 {
-	String s=Spiltting.knights;
-	public static void method(String s){
-			System.out.println(s.matches("A?"));
-	}
-	public static void main(String args[]){
-		method("Abc.");
-	}
-}

@@ -1,5 +1,0 @@
-package Test08;
-
-public class StroyCharacters implements Generator<GoodGuys>{
-
-}

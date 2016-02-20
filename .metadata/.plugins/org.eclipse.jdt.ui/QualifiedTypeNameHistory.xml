@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="typeinfo.factory.Factory"/>
-<fullyQualifiedTypeName name="FuelFilter"/>
-<fullyQualifiedTypeName name="java.lang.Object"/>
-<fullyQualifiedTypeName name="javax.xml.ws.Holder"/>
-<fullyQualifiedTypeName name="typeinfo.pets.Cat"/>
-<fullyQualifiedTypeName name="typeinfo.pets.Pets"/>
-<fullyQualifiedTypeName name="Holder3"/>
-<fullyQualifiedTypeName name="Automobile"/>
-<fullyQualifiedTypeName name="java.lang.Double"/>
-<fullyQualifiedTypeName name="java.lang.Character"/>
-<fullyQualifiedTypeName name="SixTuple"/>
-<fullyQualifiedTypeName name="Vehicle"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="LinkedStack"/>
 <fullyQualifiedTypeName name="RandomList"/>
 <fullyQualifiedTypeName name="Latte"/>
@@ -27,8 +14,6 @@
 <fullyQualifiedTypeName name="IterableFibonacci"/>
 <fullyQualifiedTypeName name="Test08.B"/>
 <fullyQualifiedTypeName name="Test08.BadGuys"/>
-<fullyQualifiedTypeName name="Test08.Generator"/>
-<fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.lang.UnsupportedOperationException"/>
 <fullyQualifiedTypeName name="Test08.StroyCharacters"/>
@@ -36,12 +21,9 @@
 <fullyQualifiedTypeName name="Test08.StroyCharacters.StoryIterator"/>
 <fullyQualifiedTypeName name="GenericMethods"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.Collection"/>
 <fullyQualifiedTypeName name="Fibonacci"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="BasicGenerator"/>
 <fullyQualifiedTypeName name="Cat"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
@@ -50,14 +32,32 @@
 <fullyQualifiedTypeName name="BasicGeneratorDemo"/>
 <fullyQualifiedTypeName name="CountedObject"/>
 <fullyQualifiedTypeName name="TwoTuple"/>
-<fullyQualifiedTypeName name="FourTuple"/>
 <fullyQualifiedTypeName name="FiveTuple"/>
 <fullyQualifiedTypeName name="ThreeTuple"/>
-<fullyQualifiedTypeName name="Amphibian"/>
 <fullyQualifiedTypeName name="Tuple"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="java.util.EnumSet"/>
 <fullyQualifiedTypeName name="Watercolors"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="DirFilter"/>
+<fullyQualifiedTypeName name="java.util.concurrent.SynchronousQueue"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.io.FilenameFilter"/>
+<fullyQualifiedTypeName name="firth.five.Teller"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.util.Queue"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="Test08.Generator"/>
+<fullyQualifiedTypeName name="firth.five.Customer"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="TupleList"/>
+<fullyQualifiedTypeName name="TupleTest"/>
+<fullyQualifiedTypeName name="FourTuple"/>
+<fullyQualifiedTypeName name="Vehicle"/>
+<fullyQualifiedTypeName name="Amphibian"/>
 <fullyQualifiedTypeName name="Sets"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>
