@@ -1,0 +1,10 @@
+interface A{}
+interface B{}
+public class Test25 {
+	public <T extends A> void f(T t){
+		System.out.println(t);
+	}
+	public <T extends B> void g(T t){
+		System.out.println(t);
+	}
+}

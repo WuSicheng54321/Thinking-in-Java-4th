@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class Test2627 {
+	public static void main(String args[]){
+		try{
+			List<Number> list=new ArrayList<Integer>();
+		}catch(Exception e){
+			System.out.println(e);
+		}
+		
+		@SuppressWarnings("unused")
+		List<? extends Number> list2=new ArrayList<Integer>();
+	}
+}
