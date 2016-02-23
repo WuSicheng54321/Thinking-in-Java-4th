@@ -1,0 +1,16 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class TestWriter {
+	public static void main(String[] args) {
+		FileWriter writer=null;
+		try{
+			writer=new FileWriter("home/wusicheng/workspace/ThinkingInJava18/src/unicode.dat");
+			for(int c=0;c<50000;c++){
+				writer.write(c);
+			}
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+}

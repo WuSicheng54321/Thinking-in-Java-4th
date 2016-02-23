@@ -1,0 +1,16 @@
+import java.io.*;
+
+public class TestDataInputStream {
+	public static void main(String[] args) {
+		ByteArrayOutputStream bos=new ByteArrayOutputStream();
+		DataOutputStream dos=new DataOutputStream(bos);
+		try {
+			dos.writeInt((int) Math.random());
+			dos.writeBoolean(true);
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

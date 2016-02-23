@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.Date;
+
+public class TestPrintStream {
+	public static void main(String[] args) {
+		String s=null;
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		try{
+			FileWriter fw=new FileWriter("/home/wusicheng/workspace/this.txt",true);
+			PrintWriter pw=new PrintWriter(fw);
+			while((s=br.readLine())!=null){
+				if(s.equalsIgnoreCase("exit")) {break;}
+				System.out.println(s.toUpperCase());
+				pw.println("------");
+				pw.println(s);
+				pw.flush();
+			}
+			pw.println("===="+new Date()+"====");
+			pw.close();
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+}

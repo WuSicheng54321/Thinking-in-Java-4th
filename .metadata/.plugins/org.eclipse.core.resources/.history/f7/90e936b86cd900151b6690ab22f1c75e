@@ -1,0 +1,15 @@
+import java.io.File;
+import java.util.Arrays;
+
+public class UstFire {
+	public static void main(String[] args) {
+		String separator=File.separator;
+		String pathname="home"+separator+"wusicheng";
+		File f=new File(pathname);
+		StringBuilder result=new StringBuilder();
+		if(f.exists()){
+			result.append(pathname);
+			System.out.println(result.toString());
+		}
+	}
+}

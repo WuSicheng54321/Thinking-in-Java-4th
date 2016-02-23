@@ -1,0 +1,22 @@
+import java.io.*;
+
+public class TestFireInputStream {
+	public static void main(String[] args) {
+		FileInputStream in=null;
+		int b=0;
+		try{
+			in=new FileInputStream("/home/wusicheng/workspace/ThinkingInJava18/src/TestFireInputStream.java");
+			while((in.read())!=-1){
+				System.out.print(in.read());
+				b++;
+			}
+			in.close();
+		}catch(FileNotFoundException e){
+			System.out.println("找不到文件");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("一共读取了："+b+"个字节");
+	}
+}

@@ -1,0 +1,22 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+public class TestBufferReader {
+	public static void main(String[] args) {
+		FileReader reader=null;
+		BufferedReader br=null;
+		int b=0;
+		try{
+			reader=new FileReader("/home/wusicheng/workspace/ThinkingInJava18"
+					+ "/src/TestBufferReader.java");
+			br=new BufferedReader(reader);
+			while((b=br.read())!=-1){
+				System.out.println(br.readLine());
+			}
+			reader.close();
+			br.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}

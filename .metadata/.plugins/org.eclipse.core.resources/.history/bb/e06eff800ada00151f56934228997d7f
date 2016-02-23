@@ -1,0 +1,21 @@
+import java.io.*;
+
+public class TestOutputStreamWriter {
+	public static void main(String[] args) {
+		try {
+			OutputStreamWriter osw=new OutputStreamWriter(new FileOutputStream("/home"
+					+ "/wusicheng/workspace/ThinkingInJava18/src/TO.java"));
+			try {
+				osw.write("hello");
+				System.out.println(osw.getEncoding());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			osw.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

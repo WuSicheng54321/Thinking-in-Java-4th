@@ -1,0 +1,21 @@
+import java.io.File;
+import java.util.Arrays;
+
+public class UstFire {
+	public static void main(String[] args) {
+		String separator=File.separator;
+		String pathname="home"+separator+"wusicheng";
+		File f=new File(pathname);
+		tree(f);
+	}
+	
+	private static void tree(File f){
+		File[] chirds=f.listFiles();
+		for(int i=0;i<chirds.length;i++){
+			System.out.println(chirds[i].getName());
+			if(f.isDirectory()){
+				tree(chirds[i]);
+			}
+		}
+	}
+}
