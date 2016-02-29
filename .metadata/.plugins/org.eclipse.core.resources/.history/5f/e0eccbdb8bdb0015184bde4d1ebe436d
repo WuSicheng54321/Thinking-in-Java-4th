@@ -1,0 +1,28 @@
+package Video;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetSocketAddress;
+import java.net.SocketAddress;
+import java.net.SocketException;
+
+public class UDPClient {
+	public static void main(String[] args) {
+		byte[] buf=(new String("long")).getBytes();
+		DatagramPacket dp=new DatagramPacket(buf, buf.length	, new InetSocketAddress(
+				"127.0.0.1", 9999));
+		try {
+			DatagramSocket ds=new DatagramSocket(1234);
+			ds.send(dp);
+			ds.close();
+		} catch (SocketException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

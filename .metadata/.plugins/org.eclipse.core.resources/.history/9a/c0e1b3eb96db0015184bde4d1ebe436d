@@ -1,0 +1,23 @@
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.Panel;
+
+public class TestMulFrame {
+	public static void main(String[] args) {
+		MyFrame myFrame=new MyFrame("hello", 200, 200, Color.BLUE, Color.YELLOW);
+	}
+}
+class MyFrame extends Frame{
+	Panel p=new Panel();
+	public MyFrame(String s,int x,int y,Color c,Color cc) {
+		setTitle(s);
+		setSize(x, y);
+		setBackground(c);	
+		p.setSize(x/2,y/2);
+		p.setBounds(25, 26, x/2, y/2);
+		p.setBackground(cc);
+		add(p);
+		setVisible(true);
+		p.setVisible(true);
+	}
+}

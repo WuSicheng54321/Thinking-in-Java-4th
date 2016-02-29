@@ -1,0 +1,38 @@
+package Video;
+
+public class TestJoin {
+	public static void main(String[] args) {
+		Runnable3 r3=new Runnable3();
+		Thread t3=new Thread(r3);
+		t3.start();
+/*		try {
+			t3.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		for(int i=0;i<100;i++){
+			System.out.println("Main");
+		}
+	}
+}
+class Runnable3 implements Runnable{
+	public void run(){
+		boolean frag=true;
+		while(frag){
+			for(int i=0;i<100;i++){
+				if(i%10==0){
+					Thread.yield();;
+				}else if(i==100){
+					frag=false;
+				}
+				System.out.println("---------------Runnable"+i);
+/*//				try {
+//					Thread.sleep(1000);
+//				} catch (InterruptedException e) {
+//					e.printStackTrace();
+//				}
+*/			}
+		}
+	}
+}

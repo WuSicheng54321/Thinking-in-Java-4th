@@ -1,0 +1,15 @@
+import java.awt.Color;
+import java.awt.Frame;
+
+public class TestMulFrame {
+
+}
+class MyFrame extends Frame{
+	public static int i=0;
+	MyFrame(int x,int y,int w,int h,Color c){
+		super("My frame id"+i);
+		setSize(100, 100);
+		setBackground(Color.BLACK);
+		setVisible(true);
+	}
+}

@@ -1,0 +1,75 @@
+package Video;
+
+public class ProductCumsumer {
+	public static void main(String[] args) {
+		SyncStack ss=new SyncStack();
+		Product p=new Product(ss);
+		Cumser c=new Cumser(ss);
+		new Thread(p).start();
+		new Thread(c).start();
+	}
+}
+class WoTou{
+	int id;
+	WoTou(int id){
+		this.id=id;
+	}
+}
+class SyncStack{
+	int index=0;
+	WoTou[] wt=new WoTou[10];
+	
+	public  synchronized void push(WoTou wotou){
+		while(index==wt.length){
+			try {
+				this.wait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		this.notify();
+		wt[index]=wotou;
+		index++;
+	}
+	
+	public synchronized WoTou pop(){
+		while(index==0){
+			try {
+				this.wait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		this.notify();
+		index--;
+		return wt[index];
+	}
+}
+
+class Product implements Runnable{
+	SyncStack ss=new SyncStack();
+	Product(SyncStack ss){
+		this.ss=ss;
+	}
+	public void run(){
+		for(int i=0;i<20;i++){
+			WoTou wotou=new WoTou(i);
+			ss.push(wotou);
+System.out.println("product----"+i);
+		}
+	}
+}
+class Cumser implements Runnable{
+	SyncStack ss=new SyncStack();
+	public Cumser(SyncStack ss) {
+		this.ss=ss;
+	}
+	public void run(){
+		for(int i=0;i<20;i++){
+			ss.pop();
+System.out.println("cumser---"+i);
+		}
+	}
+}

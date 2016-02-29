@@ -1,0 +1,32 @@
+package Video;
+
+import java.io.*;
+import java.net.*;
+import java.util.Scanner;
+
+public class TalkServer {
+	public static void main(String[] args) {
+		String s=null;
+		InputStream in=null;
+		OutputStream  out=null;
+		Scanner input=new Scanner(System.in);
+		try {
+			ServerSocket ss=new ServerSocket(8888);
+			Socket socket=ss.accept();
+			in=socket.getInputStream();
+			out=socket.getOutputStream();
+			DataInputStream dis=new DataInputStream(in);
+			DataOutputStream dos=new DataOutputStream(out);
+			dos.writeUTF("Address"+socket.getInetAddress()+"  ,  Port#"+socket.getPort());
+			while(!s.equals("exit")){
+				s=input.nextLine();
+				dos.writeUTF(s);
+				System.out.println(dis.readUTF());
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

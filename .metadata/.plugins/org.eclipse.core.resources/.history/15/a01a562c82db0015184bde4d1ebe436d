@@ -1,0 +1,31 @@
+package Video;
+
+import java.io.*;
+import java.net.*;
+
+public class TalkServer {
+	public static void main(String[] args) {
+		String s=null;
+		InputStream in=null;
+		OutputStream  out=null;
+		try {
+			ServerSocket ss=new ServerSocket(8888);
+			Socket socket=ss.accept();
+			in=socket.getInputStream();
+			out=socket.getOutputStream();
+			DataInputStream dis=new DataInputStream(in);
+			DataOutputStream dos=new DataOutputStream(out);
+			while(!s.equals("exit")){
+				
+			}
+			
+			
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

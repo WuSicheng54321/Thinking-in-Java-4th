@@ -1,0 +1,20 @@
+package Book.Test;
+
+import java.io.*;
+
+public class SortedDirList {
+	String[] list=null;
+	public SortedDirList(File path){
+		list=path.list();
+	}
+	public String[] list(){
+		for(String s:list){
+			System.out.println(s);
+		}
+		return list;
+	}
+	public static void main(String[] args) {
+		SortedDirList sd=new SortedDirList(new File("/home/wusicheng/workspace"));
+		sd.list();
+	}
+}

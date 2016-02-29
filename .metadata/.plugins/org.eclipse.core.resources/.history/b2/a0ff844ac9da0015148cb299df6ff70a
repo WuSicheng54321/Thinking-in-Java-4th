@@ -1,0 +1,43 @@
+package Video;
+
+public class TestDeadLock implements Runnable{
+	private int flag=1;
+	Object obj1=new Object(),obj2=new Object();
+	public void run(){
+		System.out.println("flag "+flag);
+		if(flag==1){
+			synchronized (obj1) {
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				synchronized (obj2) {
+					System.out.println("1");
+					flag=0;
+				}
+			}
+		}else if(flag==0){
+			synchronized (obj2) {
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				synchronized (obj1) {
+					System.out.println("0");
+					flag=1;
+				}
+			}
+		}
+	}
+	public static void main(String[] args) {
+		TestDeadLock td=new TestDeadLock();
+		Thread td1=new Thread(td);
+		Thread td2=new Thread(td);
+		td1.start();
+		td2.start();
+	}
+}
